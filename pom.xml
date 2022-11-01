@@ -78,11 +78,11 @@
 		</plugins>
 	</build>
 	<distributionManagement>
-        	<repository>
-            		<id>maven-snapshots</id>
-            		<url>http://192.168.1.10:8081/repository/maven-snapchots/</url>
-        	</repository>
-    </distributionManagement>
+    <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>http://192.168.1.10:8081/repository/maven-snapchots/</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
