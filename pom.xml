@@ -78,10 +78,10 @@
 		</plugins>
 	</build>
 	<distributionManagement>
-    <snapshotRepository>
+    <repository>
       <id>nexus-releases</id>
       <url>http://localhost:8081/repository/mavenreleases/</url>
-    </snapshotRepository>
+    </repository>
   </distributionManagement>
 </project>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
