@@ -1,4 +1,5 @@
 FROM openjdk:8-jdk-alpine
 EXPOSE 8081
-ADD target/*.war /
-ENTRYPOINT ["java", "-jar", "Timesheet-spring-boot.war"]
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
