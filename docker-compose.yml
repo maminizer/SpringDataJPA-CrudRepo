@@ -14,8 +14,8 @@ services:
      - MYSQL_PASSWORD=root
 
 
-  spring_app:
-    image: maminizer/repo:14
+  backend:
+    image: maminizer/repo:latest
     container_name: maminizer
     restart: on-failure
     environment:
