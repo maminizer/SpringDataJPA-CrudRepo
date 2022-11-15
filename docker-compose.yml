@@ -17,6 +17,8 @@ services:
   backend:
     image: maminizer/repo:latest
     container_name: maminizer
+    ports:
+     - 9999:9999
     restart: on-failure
     environment:
      - spring.datasource.url=jdbc:mysql://mysqldb:3306/achatdb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
