@@ -3,3 +3,7 @@ EXPOSE 8081
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
+
+FROM nginx
+EXPOSE 80
+COPY /dist/client/ /usr/share/nginx/html
