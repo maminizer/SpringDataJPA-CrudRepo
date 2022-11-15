@@ -15,7 +15,7 @@ services:
 
 
   spring_app:
-    image: maminizer/devops
+    image: maminizer/repo
     container_name: maminizer
     restart: on-failure
     environment:
