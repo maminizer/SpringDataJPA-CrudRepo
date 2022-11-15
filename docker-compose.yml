@@ -19,7 +19,7 @@ services:
     container_name: maminizer
     restart: on-failure
     environment:
-     - spring.datasource.url=jdbc:mysql://mysqldb:3306/achatdb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+     - spring.datasource.url=jdbc:mysql://mysqldb:3307/achatdb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
      - 8089:8089
     depends_on:
      - mysqldb
