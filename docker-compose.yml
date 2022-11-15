@@ -12,6 +12,8 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=achatdb
+    volumes:
+      - db:/var/lib/mysql
 
   app:
     depends_on:
@@ -42,6 +44,5 @@ services:
      - backend
      
 volumes:
-  mysql-data:
-    driver: local
+  db:
      
