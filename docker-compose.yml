@@ -31,8 +31,7 @@ services:
         "spring.jpa.hibernate.ddl-auto" : "update" 
         }'
     volumes:
-      - .m2:/root/.m2
-     
+      - .m2:/root/.m2    
 volumes:
   db:
      
