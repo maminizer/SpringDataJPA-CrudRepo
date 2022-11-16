@@ -2,7 +2,7 @@ version: "3"
 services:
   mysqldb:
     image: mysql
-    container_name: mysql
+    container_name: mysql_prod
     command: mysqld --default-authentication-plugin=mysql_native_password
     volumes:
       - mysql-data:/var/local/mysql/data
