@@ -6,4 +6,4 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 
 FROM nginx
 EXPOSE 80
-COPY /dist/client/ /usr/share/nginx/html
+COPY /dist/crudtuto-Front/ /usr/share/nginx/html
