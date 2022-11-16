@@ -32,16 +32,6 @@ services:
         }'
     volumes:
       - .m2:/root/.m2
-
-     
-  angular_front:
-    image: anas1412/achatfront
-    container_name: achatangular
-    restart: on-failure
-    ports:
-     - 4200:80
-    depends_on:
-     - app
      
 volumes:
   db:
