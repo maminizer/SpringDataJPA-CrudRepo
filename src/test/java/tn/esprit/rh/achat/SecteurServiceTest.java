@@ -34,10 +34,10 @@ public class SecteurServiceTest {
 	SecteurActiviteRepository SecteurRepository;
 	
 	@InjectMocks
+	@Autowired
 	SecteurActiviteServiceImpl SecteurService;
 	
-	@Autowired
-	SecteurActiviteRepository SecteurRepository;
+	
 
 	@Test
 	public void testRetrieveSecteur() {
