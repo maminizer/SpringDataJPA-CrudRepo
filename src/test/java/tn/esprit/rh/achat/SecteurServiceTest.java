@@ -34,7 +34,7 @@ public class SecteurServiceTest {
 
 	@Test
 	public void testRetrieveSecteur() {
-		SecteurActivite secteur = new SecteurActivite(1L,"aaa","bbb",null);
+		SecteurActivite secteur = new SecteurActivite(1L,"123","commercial",null);
 		secteur.setIdSecteurActivite(1L);
 		
 		
@@ -43,19 +43,19 @@ public class SecteurServiceTest {
 		Assertions.assertNotNull(secteur);
 		
 		System.out.println(secteur);
-		System.out.println("Get By ID works perfectly !!!");
+		System.out.println("Test 1 : ID retrival - work !");
 	}
 	
 	
 	@Test
 	public void createSecteurTest() {
-		SecteurActivite secteur2 = new SecteurActivite(null,"qqqq","fff",null);
+		SecteurActivite secteur2 = new SecteurActivite(null,"124","marketing",null);
 		secteur2.setIdSecteurActivite(2L);
 		
 		SecteurService.addSecteurActivite(secteur2);
 		verify(SecteurRepository, times(1)).save(secteur2);
 		System.out.println(secteur2); 
-		System.out.println(" Create is working correctly...!!");  
+		System.out.println("Test 2 : New instance creation - work !");  
 	}
 	
 	
@@ -72,7 +72,7 @@ public class SecteurServiceTest {
 		when(SecteurService.retrieveAllSecteurActivite()).thenReturn(SecteurList);
 		List<SecteurActivite> sList = SecteurService.retrieveAllSecteurActivite();
 		assertEquals(3, sList.size());
-		System.out.println("Alles Gut !!!!");
+		System.out.println("Test 3 : Retrive all sector instances - work !");
 		
 	}
 	
@@ -88,7 +88,7 @@ public class SecteurServiceTest {
 		verify(SecteurRepository).deleteById(secteur1.getIdSecteurActivite());
 		
 		System.out.println(secteur1);
-		System.out.println(" Delete is working correctly...!!");  
+		System.out.println("Test 4 : Delete specific sector instance - work !");  
 		
 	}
 	
