@@ -8,6 +8,7 @@ import static org.mockito.Mockito.when;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import org.junit.jupiter.api.MethodOrderer;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -21,8 +22,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import tn.esprit.rh.achat.entities.SecteurActivite;
 import tn.esprit.rh.achat.repositories.SecteurActiviteRepository;
 import tn.esprit.rh.achat.services.SecteurActiviteServiceImpl;
+import org.springframework.test.context.junit4.SpringRunner;
 
 @SpringBootTest
+@RunWith(SpringRunner.class)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @ExtendWith(MockitoExtension.class)
 public class SecteurServiceTest {
 	
@@ -31,6 +35,9 @@ public class SecteurServiceTest {
 	
 	@InjectMocks
 	SecteurActiviteServiceImpl SecteurService;
+	
+	@Autowired
+	SecteurActiviteRepository SecteurRepository;
 
 	@Test
 	public void testRetrieveSecteur() {
